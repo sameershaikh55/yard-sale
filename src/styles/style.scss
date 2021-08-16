@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+	padding: 0%;
+	margin: 0%;
+	box-sizing: border-box;
+	font-family: "Lato", sans-serif;
+}
+
+// VARIABLES START
+$color1: #242b2c;
+$color2: #055052;
+// VARIABLES END
+
+html {
+	width: 100%;
+	font-size: 100%;
+	scroll-behavior: auto !important;
+}
+@media screen and (max-width: 992px) {
+	html {
+		font-size: 100%;
+	}
+}
+@media screen and (max-width: 668px) {
+	html {
+		font-size: 98%;
+	}
+}
+@media screen and (max-width: 575px) {
+	html {
+		font-size: 96%;
+	}
+}
+@media screen and (max-width: 475px) {
+	html {
+		font-size: 94%;
+	}
+}
+@media screen and (max-width: 380px) {
+	html {
+		font-size: 92%;
+	}
+}
+@media screen and (max-width: 280px) {
+	html {
+		font-size: 90%;
+	}
+}
+
+.f8 {
+	font-size: 0.5rem;
+}
+
+.f12 {
+	font-size: 0.75rem;
+}
+
+.f14 {
+	font-size: 0.875rem;
+}
+
+.f15 {
+	font-size: 0.938rem;
+}
+
+.f16 {
+	font-size: 1rem;
+}
+
+.f18 {
+	font-size: 1.125rem;
+}
+
+.f20 {
+	font-size: 1.25rem;
+}
+
+.fw400 {
+	font-weight: 400;
+}
+
+.fw500 {
+	font-weight: 500;
+}
+
+.fw600 {
+	font-weight: 600;
+}
+
+.fw700 {
+	font-weight: 700;
+}
+
+.fw800 {
+	font-weight: 800;
+}
+
+.fw900 {
+	font-weight: 900;
+}
+
+.page_container {
+	max-width: 1150px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.color1 {
+	color: $color1;
+}
+
+.color2 {
+	color: $color2;
+}
+
+.themeBtn {
+	background-color: $color2;
+}
+
+// HEADER START
+.header_container {
+	padding: 1rem 0rem;
+
+	.inp_container {
+		input {
+			padding-left: 1.5rem;
+			border: 1px solid $color2;
+
+			&:focus {
+				outline: none;
+			}
+		}
+		.search_icon {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 2%;
+		}
+	}
+}
+// HEADER END
