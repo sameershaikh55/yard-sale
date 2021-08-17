@@ -5,14 +5,19 @@ import { IoIosArrowDown } from "react-icons/io";
 import { HiOutlineSearch } from "react-icons/hi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Autocomplete from "react-autocomplete";
+import { ImCross } from "react-icons/im";
 
-const Header = ({ inp, setInp }) => {
+const Header = ({ inp, setInp, ClickEvent, isOpen }) => {
 	// STICKY FUNCTIONS START
 	window.addEventListener("scroll", function () {
 		var header = document.querySelector(".header_container");
 		if (header !== null) {
 			header.classList.toggle("sticky", window.scrollY > 1);
-			header.classList.toggle("shadow-sm", window.scrollY > 1);
+			if (isOpen) {
+				header.classList.toggle("shadow-sm", window.scrollY > 1);
+			} else {
+				header.classList.toggle("", window.scrollY > 1);
+			}
 		}
 	});
 	// STICKY FUNCTIONS END
@@ -60,13 +65,6 @@ const Header = ({ inp, setInp }) => {
 										onSelect={(val) => setInp(val)}
 										inputProps={{ placeholder: "Find service" }}
 									/>
-									{/* <input
-										type="text"
-										placeholder="Find service"
-										className="py-1 f14"
-										value={inp}
-										onChange={(e) => setInp(e.target.value)}
-									/> */}
 									<button className="px-3 border-0 themeBtn text-white">
 										Search
 									</button>
@@ -112,9 +110,13 @@ const Header = ({ inp, setInp }) => {
 						</div>
 
 						{/* HAMBURGER START */}
-						<div className="d-block d-lg-none">
-							<GiHamburgerMenu fontSize="1.5rem" />
-						</div>
+						{(!isOpen && (
+							<div className="d-block d-lg-none">
+								<GiHamburgerMenu onClick={ClickEvent} fontSize="1.5rem" />
+							</div>
+						)) || (
+							<ImCross onClick={ClickEvent} fontSize="1.4rem" color="#242b2c" />
+						)}
 						{/* HAMBURGER END */}
 					</div>
 				</div>

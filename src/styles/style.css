@@ -188,6 +188,10 @@ html {
   border-bottom-right-radius: 3px;
 }
 
+.header_container img {
+  z-index: 999;
+}
+
 body {
   height: 200vh;
 }
@@ -200,6 +204,117 @@ body {
   background-color: #fff;
 }
 
+/* ==================== SideBAR STYLING END ======================== */
+.SideBarContainer {
+  padding-top: 4.5rem;
+  position: fixed;
+  right: 0%;
+  left: 0%;
+  padding-bottom: 1.5rem;
+  background-color: #fff;
+  z-index: 111;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-shadow: 1px 1px 10px #4d4d4d;
+          box-shadow: 1px 1px 10px #4d4d4d;
+}
+
+.SideBarContainer .inp_container input {
+  height: 34px;
+  padding-left: 1.6rem;
+  border: 1px solid #055052;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  z-index: 9999;
+  width: 200px;
+}
+
+.SideBarContainer .inp_container input:focus {
+  outline: none;
+}
+
+.SideBarContainer .inp_container input::-webkit-input-placeholder {
+  color: #a3a3a3;
+}
+
+.SideBarContainer .inp_container input:-ms-input-placeholder {
+  color: #a3a3a3;
+}
+
+.SideBarContainer .inp_container input::-ms-input-placeholder {
+  color: #a3a3a3;
+}
+
+.SideBarContainer .inp_container input::placeholder {
+  color: #a3a3a3;
+}
+
+.SideBarContainer .inp_container .search_icon {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 2%;
+}
+
+.SideBarContainer .inp_container .btn_cont {
+  width: 20%;
+}
+
+.SideBarContainer .inp_container .btn_cont button {
+  width: 100%;
+}
+
+.SideBarContainer .logo {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+}
+
+.SideBarContainer .logo img {
+  width: 120px;
+}
+
+.SideBarContainer ul {
+  padding-left: 0rem;
+}
+
+.SideBarContainer ul li {
+  position: relative;
+  list-style: none;
+  cursor: pointer;
+}
+
+.SideBarContainer ul li a {
+  color: #242b2c;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 5px;
+  font-size: 1.4rem;
+}
+
+.SideBarContainer ul li .activeNav::after {
+  content: "";
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+  height: 10%;
+  width: 100%;
+  background-color: #007bbc;
+  border-radius: 5px;
+}
+
+.CrossBTn {
+  position: absolute;
+  top: 4.8%;
+  right: 3.4%;
+  cursor: pointer;
+}
+
+/* ==================== SideBAR STYLING END ======================== */
 .under_header_cont_upper {
   padding-top: 73px;
 }

@@ -8,16 +8,17 @@ import ProductList from "../components/ProductList.jsx";
 import UnderHeader from "../components/UnderHeader.jsx";
 import FilterItems from "../components/FilterItems.jsx";
 import Footer from "../components/Footer.jsx";
+import Sidebar from "../components/Sidebar.jsx";
+import { useHooks } from "../Hooks/useHooks";
 
 const Home = () => {
-	// const [cat, setCat] = useState();
+	const { isOpen, OnClick } = useHooks();
 	const [inp, setInp] = useState();
-	// console.log(cat);
-	// console.log(inp);
 
 	return (
 		<>
-			<Header inp={inp} setInp={setInp} />
+			<Header isOpen={isOpen} ClickEvent={OnClick} inp={inp} setInp={setInp} />
+			<Sidebar inp={inp} setInp={setInp} ClickEvent={OnClick} isOpen={isOpen} />
 			<Fade>
 				<UnderHeader setInp={setInp} />
 				<Hero />
