@@ -170,6 +170,7 @@ body {
 }
 // FOR STICKy
 .header_container.sticky {
+	z-index: 99;
 	transition: 0.7s;
 	position: fixed;
 	width: 100%;
@@ -225,16 +226,37 @@ body {
 	}
 
 	.product_list {
+		// display: flex;
+		// flex-wrap: wrap;
+		--bs-gutter-x: 1.2rem;
+		--bs-gutter-y: 1.2rem;
 		display: flex;
-		width: 100%;
-		gap: 15px;
+		flex-wrap: wrap;
+		margin-top: calc(var(--bs-gutter-y) * -1);
+		margin-right: calc(var(--bs-gutter-x) * -0.5);
+		margin-left: calc(var(--bs-gutter-x) * -0.5);
+		// width: 100%;
+		// gap: 15px;
+
+		& > * {
+			flex-shrink: 0;
+			width: 100%;
+			max-width: 100%;
+			padding-right: calc(var(--bs-gutter-x) * 0.5);
+			padding-left: calc(var(--bs-gutter-x) * 0.5);
+			margin-top: var(--bs-gutter-y);
+		}
 
 		.product {
+			flex: 0 0 auto;
 			width: 20%;
 
 			.card_container {
 				img {
 					width: 100%;
+					max-height: 200px;
+					height: 100%;
+					object-fit: cover;
 				}
 			}
 		}
@@ -295,3 +317,81 @@ body {
 	// CARD END
 }
 // PRODUCT LIST END
+
+// FILTER ITEMS START
+.filter_container {
+	background-color: #f9f9f9;
+
+	.filter_list_container {
+		--bs-gutter-x: 1.2rem;
+		--bs-gutter-y: 1.2rem;
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: calc(var(--bs-gutter-y) * -1);
+		margin-right: calc(var(--bs-gutter-x) * -0.5);
+		margin-left: calc(var(--bs-gutter-x) * -0.5);
+		// width: 100%;
+		// gap: 15px;
+
+		& > * {
+			flex-shrink: 0;
+			width: 100%;
+			max-width: 100%;
+			padding-right: calc(var(--bs-gutter-x) * 0.5);
+			padding-left: calc(var(--bs-gutter-x) * 0.5);
+			margin-top: var(--bs-gutter-y);
+		}
+
+		.cont {
+			flex: 0 0 auto;
+			width: 20%;
+			transition: 0.6s;
+
+			li {
+				color: $color1;
+				transition: 0.6s;
+
+				&:hover {
+					transition: 0.6s;
+					color: $color2;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+// FILTER ITEMS END
+
+// FOOTER START
+.footer_container {
+	background: url(../assets/footer.svg);
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 4rem 0rem;
+	background-size: cover;
+
+	.share_cont {
+		margin: auto;
+		background: rgba(255, 255, 255, 0.1);
+		padding: 1.2rem 0rem;
+		max-width: 280px;
+		border-radius: 20px;
+
+		.share_icon {
+			margin: 0rem 0.2rem;
+			padding: 0.4rem;
+			border-radius: 6px;
+			font-size: 1.8rem;
+			color: #ffffff50;
+			transition: 0.6s;
+
+			&:hover {
+				transition: 0.6s;
+				background-color: #fff;
+				color: $color2;
+			}
+		}
+	}
+}
+// FOOTER END

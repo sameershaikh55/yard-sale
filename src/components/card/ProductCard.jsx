@@ -9,7 +9,7 @@ const ProductCard = () => {
 	return (
 		<div className="card_container">
 			<div className="img_container">
-				<img src={card_img} alt="" />
+				<img className="w-100" src={card_img} alt="" />
 				<div className="heart_cont pointer">
 					{(!heart && (
 						<FaRegHeart

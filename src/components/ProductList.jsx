@@ -11,8 +11,8 @@ const ProductList = () => {
 					</h2>
 
 					{/* PRODUCT LIST START */}
-					<div className="product_list mt-5">
-						{[1, 1, 1, 1, 1].map(() => {
+					<div className="product_list mt-4">
+						{[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map(() => {
 							return (
 								<div className="product">
 									<ProductCard />
@@ -21,6 +21,12 @@ const ProductList = () => {
 						})}
 					</div>
 					{/* PRODUCT LIST END */}
+
+					<div className="d-flex justify-content-center mt-4">
+						<button className="themeBtn border-0 px-4 py-2 text-white rounded-1">
+							See More
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
