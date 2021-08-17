@@ -112,6 +112,10 @@ html {
 
 .color1 {
 	color: $color1;
+
+	&:hover {
+		color: $color1;
+	}
 }
 
 .color2 {
@@ -124,15 +128,23 @@ html {
 
 // HEADER START
 .header_container {
-	padding: 1rem 0rem;
+	padding: 1.3rem 0rem;
+	transition: 0.7s;
 
 	.inp_container {
 		input {
-			padding-left: 1.5rem;
+			padding-left: 1.6rem;
 			border: 1px solid $color2;
+			border-top-left-radius: 3px;
+			border-bottom-left-radius: 3px;
+			width: 220px;
 
 			&:focus {
 				outline: none;
+			}
+
+			&::placeholder {
+				color: #a3a3a3;
 			}
 		}
 		.search_icon {
@@ -141,6 +153,53 @@ html {
 			transform: translateY(-50%);
 			left: 2%;
 		}
+
+		button {
+			border-top-right-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
 	}
 }
+body {
+	height: 200vh;
+}
+// FOR STICKy
+.header_container.sticky {
+	transition: 0.7s;
+	position: fixed;
+	width: 100%;
+	background-color: #fff;
+}
 // HEADER END
+
+// UNDER HEADER START
+.under_header_cont {
+	border-top: 1px solid #bec4c4;
+	border-bottom: 1px solid #bec4c4;
+}
+// UNDER HEADER END
+
+// HERO START
+.hero_container {
+	.hero_img {
+		background: url(../assets/hero.svg);
+		width: 100%;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		height: 327.3px;
+
+		.inner_text {
+			margin-left: 4rem;
+		}
+
+		h1 {
+			line-height: 50px;
+		}
+
+		button {
+			background-color: #f3f2c9;
+		}
+	}
+}
+// HERO END

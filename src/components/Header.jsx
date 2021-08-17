@@ -5,6 +5,16 @@ import { IoIosArrowDown } from "react-icons/io";
 import { HiOutlineSearch } from "react-icons/hi";
 
 const Header = () => {
+	// STICKY FUNCTIONS START
+	window.addEventListener("scroll", function () {
+		var header = document.querySelector(".header_container");
+		if (header !== null) {
+			header.classList.toggle("sticky", window.scrollY > 1);
+			header.classList.toggle("shadow-sm", window.scrollY > 1);
+		}
+	});
+	// STICKY FUNCTIONS END
+
 	return (
 		<div className="header_container">
 			<div className="page_container">
@@ -14,12 +24,12 @@ const Header = () => {
 							<div>
 								<img src={logo} alt="" />
 							</div>
-							<div className="inp_container position-relative ms-3">
+							<div className="inp_container position-relative ms-4">
 								<div className="d-flex">
 									<input
 										type="text"
 										placeholder="Find service"
-										className="py-1"
+										className="py-1 f14"
 									/>
 									<button className="px-3 border-0 themeBtn text-white">
 										Search
