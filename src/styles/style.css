@@ -123,6 +123,10 @@ html {
   color: #055052;
 }
 
+.color3 {
+  color: #949898;
+}
+
 .themeBtn {
   background-color: #055052;
 }
@@ -210,5 +214,91 @@ body {
 
 .hero_container .hero_img button {
   background-color: #f3f2c9;
+}
+
+.product_list_container .head {
+  position: relative;
+}
+
+.product_list_container .head::before {
+  content: url("../assets/underline.svg");
+  position: absolute;
+  z-index: 100000;
+  left: 50%;
+  top: 22px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.product_list_container .product_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  gap: 15px;
+}
+
+.product_list_container .product_list .product {
+  width: 20%;
+}
+
+.product_list_container .product_list .product .card_container img {
+  width: 100%;
+}
+
+.product_list_container .card_container {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.product_list_container .card_container .img_container {
+  position: relative;
+}
+
+.product_list_container .card_container .img_container img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.product_list_container .card_container .img_container .heart_cont {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+}
+
+.product_list_container .card_container .card_body {
+  padding: 12px;
+}
+
+.product_list_container .card_container .card_body .name {
+  width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product_list_container .card_container .card_body button {
+  border: 1px solid #055052;
+  padding: 6px;
+  border-radius: 5px;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  color: #055052;
+}
+
+.product_list_container .card_container:hover {
+  background: #fff;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-box-shadow: 1px 1px 15px #d3d3d3;
+          box-shadow: 1px 1px 15px #d3d3d3;
+}
+
+.product_list_container .card_container:hover button {
+  background-color: #055052;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
