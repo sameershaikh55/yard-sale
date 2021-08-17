@@ -13,11 +13,7 @@ const Header = ({ inp, setInp, ClickEvent, isOpen }) => {
 		var header = document.querySelector(".header_container");
 		if (header !== null) {
 			header.classList.toggle("sticky", window.scrollY > 1);
-			if (isOpen) {
-				header.classList.toggle("shadow-sm", window.scrollY > 1);
-			} else {
-				header.classList.toggle("", window.scrollY > 1);
-			}
+			header.classList.toggle("shadow-sm", window.scrollY > 1);
 		}
 	});
 	// STICKY FUNCTIONS END
