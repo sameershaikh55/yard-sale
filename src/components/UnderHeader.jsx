@@ -2,6 +2,15 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const UnderHeader = () => {
+	// STICKY FUNCTIONS START
+	window.addEventListener("scroll", function () {
+		var header = document.querySelector(".under_header_cont");
+		if (header !== null) {
+			header.classList.toggle("sticky", window.scrollY > 1);
+		}
+	});
+	// STICKY FUNCTIONS END
+
 	return (
 		<div className="under_header_cont">
 			<div className="page_container">

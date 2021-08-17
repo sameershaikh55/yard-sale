@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import ProductCard from "./card/ProductCard";
 
 const ProductList = () => {
+	const [data, setData] = useState([
+		1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+	]);
+
+	const loadMore = () => {
+		setData([...data, 1, 1, 1, 1, 1]);
+	};
+
 	return (
 		<div className="product_list_container mt-5">
 			<div className="page_container">
@@ -12,7 +20,7 @@ const ProductList = () => {
 
 					{/* PRODUCT LIST START */}
 					<div className="product_list mt-4">
-						{[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map(() => {
+						{data.map(() => {
 							return (
 								<div className="product">
 									<ProductCard />
@@ -23,7 +31,10 @@ const ProductList = () => {
 					{/* PRODUCT LIST END */}
 
 					<div className="d-flex justify-content-center mt-4">
-						<button className="themeBtn border-0 px-4 py-2 text-white rounded-1">
+						<button
+							onClick={loadMore}
+							className="themeBtn border-0 px-4 py-2 text-white rounded-1"
+						>
 							See More
 						</button>
 					</div>

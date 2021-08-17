@@ -196,6 +196,10 @@ body {
   border-bottom: 1px solid #bec4c4;
 }
 
+.under_header_cont.sticky {
+  padding-top: 73px;
+}
+
 .hero_container .hero_img {
   background: url(../assets/hero.svg);
   width: 100%;

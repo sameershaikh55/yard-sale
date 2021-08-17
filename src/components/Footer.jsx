@@ -65,8 +65,12 @@ const Footer = () => {
 									<h5 className="text-white mb-3 fw-bold">Get the app</h5>
 
 									<div>
-										<img src={share1} alt="" className="me-3" />
-										<img src={share2} alt="" />
+										<a href="">
+											<img src={share1} alt="" className="me-3" />
+										</a>
+										<a href="">
+											<img src={share2} alt="" />
+										</a>
 									</div>
 
 									<div className="mt-3 share_icon_container">
