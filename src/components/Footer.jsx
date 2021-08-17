@@ -29,11 +29,14 @@ const Footer = () => {
 				<div className="page_container">
 					<div className="container-fluid">
 						<div className="row">
-							<div className="col-8">
+							<div className="col-md-12 col-lg-8">
 								<div className="row">
 									{data.map((prev, i) => {
 										return (
-											<div key={i} className="col-3">
+											<div
+												key={i}
+												className={`col-6 col-sm-3 ${i > 1 && "mt-5"}`}
+											>
 												<ul className="list-unstyled mb-0">
 													{prev.map((p, ind) => {
 														return (
@@ -60,7 +63,7 @@ const Footer = () => {
 									})}
 								</div>
 							</div>
-							<div className="col-4 text-center">
+							<div className="col-md-12 col-lg-4 mx-auto mt-5 mt-lg-0 mt- text-center">
 								<div className="share_cont">
 									<h5 className="text-white mb-3 fw-bold">Get the app</h5>
 

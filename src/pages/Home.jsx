@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Fade from "react-reveal/Fade";
 
 // IMPORTING COMPONENTS
@@ -10,11 +10,16 @@ import FilterItems from "../components/FilterItems.jsx";
 import Footer from "../components/Footer.jsx";
 
 const Home = () => {
+	// const [cat, setCat] = useState();
+	const [inp, setInp] = useState();
+	// console.log(cat);
+	// console.log(inp);
+
 	return (
 		<>
-			<Header />
+			<Header inp={inp} setInp={setInp} />
 			<Fade>
-				<UnderHeader />
+				<UnderHeader setInp={setInp} />
 				<Hero />
 				<ProductList />
 				<FilterItems />
