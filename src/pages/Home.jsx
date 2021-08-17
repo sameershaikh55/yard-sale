@@ -1,4 +1,5 @@
 import React from "react";
+import Fade from "react-reveal/Fade";
 
 // IMPORTING COMPONENTS
 import Header from "../components/Header.jsx";
@@ -12,11 +13,13 @@ const Home = () => {
 	return (
 		<>
 			<Header />
-			<UnderHeader />
-			<Hero />
-			<ProductList />
-			<FilterItems />
-			<Footer />
+			<Fade>
+				<UnderHeader />
+				<Hero />
+				<ProductList />
+				<FilterItems />
+				<Footer />
+			</Fade>
 		</>
 	);
 };

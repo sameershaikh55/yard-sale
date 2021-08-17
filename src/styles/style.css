@@ -183,7 +183,7 @@ body {
 }
 
 .header_container.sticky {
-  z-index: 99;
+  z-index: 9999999999999999;
   -webkit-transition: 0.7s;
   transition: 0.7s;
   position: fixed;

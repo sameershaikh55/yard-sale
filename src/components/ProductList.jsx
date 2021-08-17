@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ProductCard from "./card/ProductCard";
+import Fade from "react-reveal/Fade";
 
 const ProductList = () => {
 	const [data, setData] = useState([
@@ -23,7 +24,9 @@ const ProductList = () => {
 						{data.map(() => {
 							return (
 								<div className="product">
-									<ProductCard />
+									<Fade>
+										<ProductCard />
+									</Fade>
 								</div>
 							);
 						})}
