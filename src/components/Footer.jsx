@@ -35,7 +35,7 @@ const Footer = () => {
 										return (
 											<div
 												key={i}
-												className={`col-6 col-sm-3 ${i > 1 && "mt-5"}`}
+												className={`col-6 col-sm-3 ${i > 1 && "mt-5 mt-sm-0"}`}
 											>
 												<ul className="list-unstyled mb-0">
 													{prev.map((p, ind) => {
